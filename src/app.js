@@ -6,6 +6,10 @@ import rutasProductos from './routes/productos.routes.js';
 import rutasProveedor from './routes/proveedor.routes.js';
 import rutasCategoria from './routes/categoria.routes.js';
 import rutasVenta from './routes/ventafactura.routes.js';
+import rutasDetallesVentas from './routes/detalles_ventas.routes.js';
+import eliminarventa from'./routes/ventafactura.routes.js';
+
+
 //import rutasCompra from './routes/comprafactura.routes.js';
 
 const app = express();
@@ -23,6 +27,8 @@ app.use('/api', rutasProductos);
 app.use('/api', rutasProveedor);
 app.use('/api', rutasCategoria);
 app.use('/api', rutasVenta);
+app.use('/api', rutasDetallesVentas);
+app.use('/api', eliminarventa);
 //app.use('/api', rutasCompra);
 
 app.use((req, res, next) => { 
