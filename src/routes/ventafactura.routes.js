@@ -1,5 +1,5 @@
     import { Router } from 'express';
-    import { obtenerVentasConDetalles,obtenerVentas,eliminarVentas,registrarVenta,actualizarVenta} from '../controllers/venta.controller.js'
+    import { obtenerVentasConDetalles,obtenerVentas,eliminarVentas,registrarVenta,actualizarVenta, obtenerVentaPorId} from '../controllers/venta.controller.js'
 
     const router = Router();
 
@@ -18,5 +18,8 @@ router.post('/registrarventa', registrarVenta);
 
 // Ruta para actualizar una venta
 router.patch('/actualizarventa/:id_venta', actualizarVenta);
+
+// Ruta para obtenerVentaPorId una venta
+router.patch('/obtenerVentaPorId/:id_venta', obtenerVentaPorId);
 
     export default router;

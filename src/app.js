@@ -10,6 +10,10 @@ import rutasDetallesVentas from './routes/detalles_ventas.routes.js';
 import eliminarventa from'./routes/ventafactura.routes.js';
 
 
+import rutasDetallesCompras from './routes/Detalles_Compras.js';
+import rutasCompras from './routes/compras.routes.js';
+
+
 //import rutasCompra from './routes/comprafactura.routes.js';
 
 const app = express();
@@ -29,6 +33,12 @@ app.use('/api', rutasCategoria);
 app.use('/api', rutasVenta);
 app.use('/api', rutasDetallesVentas);
 app.use('/api', eliminarventa);
+
+
+
+app.use('/api', rutasDetallesCompras);
+app.use('/api', rutasCompras);
+
 //app.use('/api', rutasCompra);
 
 app.use((req, res, next) => { 
