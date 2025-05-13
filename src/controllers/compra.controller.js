@@ -1,5 +1,5 @@
-import { pool } from '../db.js'; 
 
+import { pool } from '../db.js';
 
 // Obtener una compra específica por id_compra
 export const obtenerCompraPorId = async (req, res) => {

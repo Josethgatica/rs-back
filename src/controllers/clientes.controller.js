@@ -3,7 +3,7 @@ import { pool } from '../db.js';
 // Obtener todos los clientes
 export const obtenerClientes= async (req, res) => {
   try {
-    const [result] = await pool.query('select * from Cliente');
+    const [result] = await pool.query('SELECT * FROM Clientes');
     res.json(result);
   } catch (error) {
     return res.status(500).json({
@@ -16,7 +16,7 @@ export const obtenerClientes= async (req, res) => {
 // Obtener un cliente por su ID
 export const obtenerCliente = async (req, res) => {
   try {
-    const [result] = await pool.query('SELECT * FROM Cliente WHERE ID_Cliente = ?', [req.params.id]);
+    const [result] = await pool.query('SELECT * FROM Clientes WHERE id_cliente = ?', [req.params.id]);
     
     if (result.length <= 0) {
       return res.status(404).json({
